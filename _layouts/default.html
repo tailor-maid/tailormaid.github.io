@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+    <link rel="shortcut icon" href="{{ "/assets/images/favicon.png" | prepend: site.baseurl }}" type="image/x-icon">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+    <style type="text/css">
+        
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="{{ "/" | prepend: site.baseurl }}">
+                    <img id="logo" src="{{ "/assets/gfx/logo_extended_white.png" | prepend: site.baseurl }}" alt="Logo">
+                </a>
+                <span class="navbar-burger burger" data-target="navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="{{ "/price-guide" | prepend: site.baseurl }}">Price Guide</a>
+                    <a class="navbar-item" href="{{ "/special-events" | prepend: site.baseurl }}" style="display:none;">Special Events</a>
+                    <a class="navbar-item" href="{{ "/services" | prepend: site.baseurl }}">Services</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="main">
+        {{ content }}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-3">
+                    <ul>
+                        <li class="footer-title">
+                            Contact
+                        </li>
+                        <li>
+                            <p>3A Park Corner</p>
+                            <p>Ripley</p>
+                            <p>DE5 3DF</p>
+                        </li>
+                        <li>
+                            01773 747 450
+                        </li>
+                        <li>
+                            talk@tailor-maid.co.uk
+                        </li>
+                    </ul>
+                </div>
+                <div class="column is-3">
+                    <ul>
+                        <li class="footer-title">
+                            Opening Hours
+                        </li>
+                        <li>
+                            <table class="is-fullwidth">
+                                <tr>
+                                    <td width="50%">Monday</td>
+                                    <td>9:00am - 4:00pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td>9:00am - 4:00pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td>9:00am - 1:00pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td>9:00am - 4:00pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td>9:00am - 4:00pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>9:00am - 4:00pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Sundan</td>
+                                    <td>Closed</td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                </div>
+                <div class="column is-6">
+                    <ul>
+                        <li class="footer-title">
+                            Links
+                        </li>
+                        <li>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
