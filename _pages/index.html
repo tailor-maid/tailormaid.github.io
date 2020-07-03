@@ -3,22 +3,34 @@ layout: default
 permalink: /
 ---
 
+<style>
+    #homepage-nav {
+        background-image: url({{ "/assets/gfx/IMG-20200217-WA0000.jpg" | prepend: site.baseurl }});
+        background-repeat: no-repeat;
+        background-size: 60% auto;
+        background-position: top right;
+    }
+    #homepage-nav .columns .column {
+        text-shadow: 0 0 3px #101010;
+        background: #333333;
+        padding: 2em;
+        height: 30em;
+        -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+    }
+</style>
+
 <!-- Hero section -->
-<section class="hero">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-vcentered">
-                <div class="column is-half">
-                    <div class="content">
-                        <p class="title is-4">Ripley's clothing repairs and alterations service</p>
-                        <p class="subtitle is-6">Tailor Maid provides a professional and bespoke clothing repairs and alterations service, at competitive prices.</p>
-                    </div>
-                </div>
-                <div class="column has-text-centered">
-                    <figure class="image">
-                        <img class="is-rounded" style="padding:2em;" src="{{ "/assets/gfx/IMG-20200217-WA0000.jpg" | prepend: site.baseurl }}">
-                    </figure>
-                </div>
+<section id="homepage-nav" class="hero is-dark is-marginless is-paddingless">
+    <div class="hero-body is-marginless is-paddingless">
+        <div class="columns is-marginless">
+            <div class="column is-half">
+                <h1 class="title m-t-100 p-b-10 p-l-5 p-r-30">
+                    Ripley's clothing repairs and alterations service
+                </h1>
+                <h2 class="subtitle p-t-20 p-l-5 p-r-30">
+                    Tailor Maid provides a professional and bespoke clothing repairs and alterations service, at competitive prices.
+                </h2>
             </div>
         </div>
     </div>
