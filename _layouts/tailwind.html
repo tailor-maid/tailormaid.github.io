@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tailor Maid in Ripley carries out a wide range of clothing repairs and alterations at competitive prices; including wedding and bridesmaid dresses, formal wear to curtains, cushions and bags. We alter them all!">
+    <meta name="geo.position" CONTENT="53.0500574; -1.4037596">
+    <meta name="geo.placename" CONTENT="Tailor Maid">
+    <meta name="geo.region" CONTENT="Ripley, Derbyshire">
+    <meta name="robots" content="index,follow">
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <link rel="shortcut icon" href="{{ "/assets/gfx/core_logo.svg" | prepend: site.baseurl }}" type="image/x-icon">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.7/tailwind.min.css" integrity="sha512-y6ZMKFUQrn+UUEVoqYe8ApScqbjuhjqzTuwUMEGMDuhS2niI8KA3vhH2LenreqJXQS+iIXVTRL2iaNfJbDNA1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@0.1.2/dist/typography.min.css" integrity="sha512-f/MQ9j2utVYWA4Si0Bxx2Y5ZgRgJElzUYF1EFjbW6lrITwlopQ1tZJIhrvUBgOvbygQVwAaAVOcKnP02zjSMGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+<div class="flex flex-col min-h-screen">
+    {% unless page.disable_header == true %}
+        {% include header.html %}
+    {% endunless %}
+    <main class="flex-grow">
+        <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+            {{ content }}
+        </div>
+    </main>
+    {% include footer.html %}
+</div>
+</body>
+
+</html>

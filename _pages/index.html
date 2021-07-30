@@ -1,117 +1,310 @@
 ---
-layout: default
+layout: tailwind
 permalink: /
+disable_header: true
 ---
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="relative bg-white overflow-hidden" x-data="{ showMobileMenu: false}">
+    <div class="max-w-7xl mx-auto">
+        <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+            <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <polygon points="50,0 100,0 50,100 0,100" />
+            </svg>
 
-<style>
-    #homepage-nav {
-        background-image: url({{ "/assets/gfx/IMG-20200217-WA0000.jpg" | prepend: site.baseurl }});
-        background-repeat: no-repeat;
-        background-size: 60% auto;
-        background-position: top right;
-    }
-    #homepage-nav .columns .column {
-        text-shadow: 0 0 3px #101010;
-        background: #333333;
-        padding: 2em;
-        height: 30em;
-        -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
-        clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
-    }
-</style>
+            <div>
+                <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
+                    <nav class="relative flex-col items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
+                        <a class="" href="#">
+                            <span class="sr-only">Tailor Maid</span>
+                            <img width="100%" src="{{ "/assets/gfx/logo.svg" | prepend: site.baseurl }}" />
+                        </a>
+                        <div class="flex items-center md:hidden absolute top-0 right-0">
+                            <button type="button" @click="showMobileMenu = true" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none border-4 focus:ring-2 focus:ring-inset focus:ring-gray-500" aria-expanded="false">
+                                <span class="sr-only">Open main menu</span>
+                                <!-- Heroicon name: outline/menu -->
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="hidden md:block md:text-center md:space-x-8 md:p-4">
+                            <a href="{% link _pages/services.html %}" class="font-medium text-gray-500 hover:text-gray-900">Services</a>
+                            <a href="{% link _pages/price-guide.html %}" class="font-medium text-gray-500 hover:text-gray-900">Price Guide</a>
+                            <a href="{% link _pages/about.html %}" class="font-medium text-gray-500 hover:text-gray-900">About Us</a>
+                        </div>
+                    </nav>
+                </div>
 
-<!-- Hero section -->
-<section id="homepage-nav" class="hero is-dark is-marginless is-paddingless">
-    <div class="hero-body is-marginless is-paddingless">
-        <div class="columns is-marginless">
-            <div class="column is-half">
-                <h1 class="title m-t-100 p-b-10 p-l-5 p-r-30">
-                    Ripley's clothing repairs and alterations service
-                </h1>
-                <h2 class="subtitle p-t-20 p-l-5 p-r-30">
-                    Tailor Maid provides a professional and bespoke clothing repairs and alterations service, at competitive prices.
-                </h2>
-            </div>
-        </div>
-    </div>
-</section>
+                <!--
+                  Mobile menu, show/hide based on menu open state.
 
-<section class="hero is-light">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns">
-                <div class="column has-text-centered is-one-quarter-desktop">
-                    <div>
-                        <span class="icon is-large m-b-15">
-                            <i class="fas fa-thumbs-up fa-3x"></i>
-                        </span>
-                        <p class="title is-5 m-b-15">
-                            Satisfaction Guaranteed<br/>
-                        </p>
-                        <p>
-                            We make sure our customers are 100% satisfied with our work before we consider it complete.
-                        </p>
-                    </div>
-                </div>
-                <div class="column has-text-centered is-one-quarter-desktop">
-                    <div>
-                        <span class="icon is-large m-b-15">
-                            <i class="fas fa-history fa-3x"></i>
-                        </span>
-                        <p class="title is-5 m-b-15">
-                            Same Day Service<br/>
-                        </p>
-                        <p>
-                            Collect your garment the same day!
-                        </p>
-                        <p>
-                            <i>Subject to availability</i>
-                        </p>
-                    </div>
-                </div>
-                <div class="column has-text-centered is-one-quarter-desktop">
-                    <div>
-                        <span class="icon is-large m-b-15">
-                            <i class="fas fa-sms fa-3x"></i>
-                        </span>
-                        <p class="title is-5 m-b-15">
-                            Text Message Updates<br/>
-                        </p>
-                        <p>
-                            Receive a phone call and SMS notifications when your order is ready to collect!
-                        </p>
-                    </div>
-                </div>
-                <div class="column has-text-centered is-one-quarter-desktop">
-                    <div>
-                        <span class="icon is-large m-b-15">
-                            <i class="fas fa-truck fa-3x"></i>
-                        </span>
-                        <p class="title is-5 m-b-15">
-                            House Call Service<br/>
-                        </p>
-                        <p>
-                            We collect, measure and deliver!
-                        </p>
-                        <p>
-                            <i>Subject to availability</i>
-                        </p>
+                  Entering: "duration-150 ease-out"
+                    From: "opacity-0 scale-95"
+                    To: "opacity-100 scale-100"
+                  Leaving: "duration-100 ease-in"
+                    From: "opacity-100 scale-100"
+                    To: "opacity-0 scale-95"
+                -->
+                <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden" style="display:none" x-show="showMobileMenu">
+                    <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+                        <div class="px-5 pt-4 flex items-center justify-between">
+                            <div>
+                                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-gray-600.svg" alt="">
+                            </div>
+                            <div class="-mr-2">
+                                <button type="button" @click="showMobileMenu = false" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500">
+                                    <span class="sr-only">Close main menu</span>
+                                    <!-- Heroicon name: outline/x -->
+                                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="px-2 pt-2 pb-3 space-y-1">
+                            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Product</a>
+
+                            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features</a>
+
+                            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace</a>
+
+                            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company</a>
+                        </div>
+                        <a href="#" class="block w-full px-5 py-3 text-center font-medium text-gray-600 bg-gray-50 hover:bg-gray-100">
+                            Log in
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
 
-<section class="hero">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-vcentered">
-                <div class="column is-half">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2398.347829905829!2d-1.4059482834899857!3d53.05005737991807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487992cc75e24001%3A0xdb9e24fa0bd2d78c!2sTailor+Maid!5e0!3m2!1sen!2suk!4v1561717632661!5m2!1sen!2suk" frameborder="0" style="border:0; width:100%; height: 25em;" allowfullscreen></iframe>
+            <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-20 sm:px-6 md:mt-48 lg:mt-36 lg:px-8 xl:mt-36">
+                <div class="sm:text-center lg:text-left">
+                    <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                        <span class="block text-gray-600 xl:inline">Ripley's </span>
+                        <span class="block xl:inline">clothing repairs and alterations service</span>
+                    </h1>
+                    <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+                    </p>
+                    <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                        <div class="rounded-md shadow">
+                            <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700 md:py-4 md:text-lg md:px-10">
+                                Call us on 01773 747 450
+                            </a>
+                        </div>
+                        <div class="mt-3 sm:mt-0 sm:ml-3">
+                            <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200 md:py-4 md:text-lg md:px-10">
+                                Connect via Facebook
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </main>
         </div>
     </div>
-</section>
+    <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+        <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full rounded" src="{{ "/assets/gfx/store_front.jpg" | prepend: site.baseurl }}" alt="">
+    </div>
+</div>
 
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="bg-white">
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900">Things we do</h2>
+            <p class="mt-4 text-lg text-gray-500">We don't just do clothing alterations and repairs...</p>
+        </div>
+        <dl class="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-4 lg:gap-x-8">
+            <div class="relative">
+                <dt>
+                    <!-- Heroicon name: outline/check -->
+                    <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="ml-9 text-lg leading-6 font-medium text-gray-900">Invite team members</p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">
+                    Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quis ac. Lacus.
+                </dd>
+            </div>
+
+            <div class="relative">
+                <dt>
+                    <!-- Heroicon name: outline/check -->
+                    <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="ml-9 text-lg leading-6 font-medium text-gray-900">Notifications</p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">
+                    Ornare donec rhoncus vitae nisl velit, neque, mauris dictum duis. Nibh urna non parturient.
+                </dd>
+            </div>
+
+            <div class="relative">
+                <dt>
+                    <!-- Heroicon name: outline/check -->
+                    <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="ml-9 text-lg leading-6 font-medium text-gray-900">List view</p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">
+                    Etiam cras augue ornare pretium sit malesuada morbi orci, venenatis. Dictum lacus.
+                </dd>
+            </div>
+
+            <div class="relative">
+                <dt>
+                    <!-- Heroicon name: outline/check -->
+                    <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="ml-9 text-lg leading-6 font-medium text-gray-900">Boards</p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">
+                    Interdum quam pulvinar turpis tortor, egestas quis diam amet, natoque. Mauris sagittis.
+                </dd>
+            </div>
+
+            <div class="relative">
+                <dt>
+                    <!-- Heroicon name: outline/check -->
+                    <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="ml-9 text-lg leading-6 font-medium text-gray-900">Keyboard shortcuts</p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">
+                    Ullamcorper in ipsum ac feugiat. Senectus at aliquam vulputate mollis nec. In at risus odio.
+                </dd>
+            </div>
+
+            <div class="relative">
+                <dt>
+                    <!-- Heroicon name: outline/check -->
+                    <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="ml-9 text-lg leading-6 font-medium text-gray-900">Reporting</p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">
+                    Magna a vel sagittis aliquam eu amet. Et lorem auctor quam nunc odio. Sed bibendum.
+                </dd>
+            </div>
+
+            <div class="relative">
+                <dt>
+                    <!-- Heroicon name: outline/check -->
+                    <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="ml-9 text-lg leading-6 font-medium text-gray-900">Calendars</p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">
+                    Sed mi, dapibus turpis orci posuere integer. A porta viverra posuere adipiscing turpis.
+                </dd>
+            </div>
+
+            <div class="relative">
+                <dt>
+                    <!-- Heroicon name: outline/check -->
+                    <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="ml-9 text-lg leading-6 font-medium text-gray-900">Mobile app</p>
+                </dt>
+                <dd class="mt-2 ml-9 text-base text-gray-500">
+                    Quisque sapien nunc nisl eros. Facilisis sagittis maecenas id dignissim tristique proin sed.
+                </dd>
+            </div>
+        </dl>
+    </div>
+</div>
+
+
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+        <div class="lg:text-center">
+            <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                Why choose us?
+            </p>
+            <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                We aim to provide excellent customer service and make sure our customers are 100% satisfied with the work we do.
+            </p>
+        </div>
+
+        <div class="mt-10">
+            <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                <div class="relative">
+                    <dt>
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gray-500 text-white">
+                            <!-- Heroicon name: outline/emoji-happy -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Satisfaction guaranteed</p>
+                    </dt>
+                    <dd class="mt-2 ml-16 text-base text-gray-500">
+                        We make sure our customers are 100% satisfied with our work before we consider it complete.
+                        <p class="pt-2">
+                            <i>Customers must check their alterations/repairs before leaving the store.</i>
+                        </p>
+                    </dd>
+                </div>
+
+                <div class="relative">
+                    <dt>
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gray-500 text-white">
+                            <!-- Heroicon name: outline/scale -->
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                            </svg>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">No hidden fees</p>
+                    </dt>
+                    <dd class="mt-2 ml-16 text-base text-gray-500">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+                    </dd>
+                </div>
+
+                <div class="relative">
+                    <dt>
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gray-500 text-white">
+                            <!-- Heroicon name: outline/lightning-bolt -->
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Express service</p>
+                    </dt>
+                    <dd class="mt-2 ml-16 text-base text-gray-500">
+                        Customers should not have to wait <i>upto</i> 14 days for minor alterations/repairs. Our express service guarantees your garment will be ready by close of next-business day.
+                        <p class="pt-2">
+                            <i>Subject to availability and express charge.</i>
+                        </p>
+                    </dd>
+                </div>
+
+                <div class="relative">
+                    <dt>
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gray-500 text-white">
+                            <!-- Heroicon name: outline/annotation -->
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                            </svg>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Mobile notifications</p>
+                    </dt>
+                    <dd class="mt-2 ml-16 text-base text-gray-500">
+                        Receive text messages when your alteration/repairs are complete and ready for collection. Customers may also request a telephone call.
+                    </dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+</div>
