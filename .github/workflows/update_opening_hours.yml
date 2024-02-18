@@ -14,7 +14,7 @@ jobs:
         fetch-depth: 0
     - name: Download latest current opening hours
       run: |-
-        curl --location 'https://places.googleapis.com/v1/places/${{ env.PLACE_ID }}' \
+        curl --location 'https://places.googleapis.com/v1/places/${{ vars.PLACE_ID }}' \
         --header 'X-Goog-Api-Key: ${{ secrets.PLACES_API_KEY }}' \
         --header 'X-Goog-FieldMask: currentOpeningHours' \
         --header 'Content-Type: application/json' \
