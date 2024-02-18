@@ -19,12 +19,13 @@ jobs:
         --header 'X-Goog-FieldMask: currentOpeningHours' \
         --header 'Content-Type: application/json' \
         --header 'Accept: application/json'
+    - name: Parse downloaded JSON to test if valid
+      run: |-
         cat _data/current_opening_hours.json | jq type 1>/dev/null
-        
     - name: Commit and push changes (if different)
       run: |-
         git diff
         git config user.name "GitHub Actions: Update opening hours"
         git config user.email "---"
-        git diff --quiet || (git add -A && git commit -m "chore: updated opening times from automated action")
+        git diff _data/current_opening_hours.json --quiet || (git add _data/current_opening_hours.json && git commit -m "chore: updated opening times from automated action")
         git push
