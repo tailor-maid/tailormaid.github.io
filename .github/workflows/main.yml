@@ -20,5 +20,5 @@ jobs:
         git diff
         git config user.name "GitHub Actions: Update opening hours"
         git config user.email "---"
-        git diff --quiet || (git add -A && git commit -m "chore: updated opening times from main")
+        git diff --quiet || (git add -A && git commit -m "chore: updated opening times from automated action")
         git push
