@@ -27,5 +27,5 @@ jobs:
         git diff
         git config user.name "GitHub Actions: Update opening hours"
         git config user.email "---"
-        git diff _data/current_opening_hours.json --quiet || (git add _data/current_opening_hours.json && git commit -m "chore: updated opening times from automated action")
+        git diff --quiet _data/current_opening_hours.json || (git add _data/current_opening_hours.json && git commit -m "chore: updated opening times from automated action")
         git push
