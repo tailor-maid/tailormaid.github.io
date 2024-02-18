@@ -14,7 +14,9 @@ jobs:
         fetch-depth: 0
     - name: Download latest current opening hours
       run: |-
+        cat _data/current_opening_times.json
         curl "${{ secrets.PLACE_API_URL }}" | jq . > _data/current_opening_times.json
+        cat _data/current_opening_times.json
     - name: Commit and push changes (if different)
       run: |-
         git diff
