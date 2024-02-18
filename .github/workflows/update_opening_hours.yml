@@ -1,6 +1,5 @@
 name: Update opening hours from Google
 on:
-  workflow_dispatch:
   schedule:
     - cron:  '*/15 * * * *'
 
