@@ -14,13 +14,11 @@ jobs:
         fetch-depth: 0
     - name: Download latest current opening hours
       run: |-
-        pwd
-        ls -lsha
-        cat _data/current_opening_hours.json
         curl "${{ secrets.PLACE_API_URL }}" | jq . > _data/current_opening_hours.json
-        cat _data/current_opening_hours.json
     - name: Commit and push changes (if different)
       run: |-
         git diff
+        git config user.name "GitHub Actions: Update opening hours"
+        git config user.email "---"
         git diff --quiet || (git add -A && git commit -m "chore: updated opening times from main")
         git push
