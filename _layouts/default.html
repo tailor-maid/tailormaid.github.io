@@ -76,36 +76,11 @@
                             Opening Hours
                         </li>
                         <li>
-                            <table class="is-fullwidth">
-                                <tr>
-                                    <td width="50%">Monday</td>
-                                    <td>9:00am - 4:00pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Tuesday</td>
-                                    <td>9:00am - 4:00pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Wednesday</td>
-                                    <td>9:00am - 1:00pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Thursday</td>
-                                    <td>9:00am - 4:00pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Friday</td>
-                                    <td>9:00am - 4:00pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Saturday</td>
-                                    <td>9:00am - 3:00pm</td>
-                                </tr>
-                                <tr>
-                                    <td>Sunday</td>
-                                    <td>Closed</td>
-                                </tr>
-                            </table>
+                            <ul class="is-fullwidth">
+                                {% for day in site.data.current_opening_hours.result.current_opening_hours.weekday_text %}
+                                    <li>{{ day }}</li>
+                                {% endfor %]
+                            </ul>
                         </li>
                     </ul>
                 </div>
