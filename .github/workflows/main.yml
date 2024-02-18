@@ -16,9 +16,9 @@ jobs:
       run: |-
         pwd
         ls -lsha
-        cat _data/current_opening_times.json
-        curl "${{ secrets.PLACE_API_URL }}" | jq . > _data/current_opening_times.json
-        cat _data/current_opening_times.json
+        cat _data/current_opening_hours.json
+        curl "${{ secrets.PLACE_API_URL }}" | jq . > _data/current_opening_hours.json
+        cat _data/current_opening_hours.json
     - name: Commit and push changes (if different)
       run: |-
         git diff
