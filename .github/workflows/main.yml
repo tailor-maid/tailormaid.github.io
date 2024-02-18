@@ -1,0 +1,22 @@
+name: Update opening times from Google
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '*/15 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Download Feed
+      run: |-
+        curl "${{ secrets.PLACE_API_URL }}" | jq . > _data/current_opening_times.json
+    - name: Commit and push changes
+      run: |-
+        git diff
+        git diff --quiet || (git add -A && git commit -m "chore: updated opening times from main")
+        git push
