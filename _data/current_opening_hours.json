@@ -1,6 +1,6 @@
 {
   "currentOpeningHours": {
-    "openNow": false,
+    "openNow": true,
     "periods": [
       {
         "open": {
