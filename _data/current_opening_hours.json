@@ -1,6 +1,6 @@
 {
   "currentOpeningHours": {
-    "openNow": true,
+    "openNow": false,
     "periods": [
       {
         "open": {
@@ -10,7 +10,7 @@
           "date": {
             "year": 2024,
             "month": 2,
-            "day": 19
+            "day": 26
           }
         },
         "close": {
@@ -20,7 +20,7 @@
           "date": {
             "year": 2024,
             "month": 2,
-            "day": 19
+            "day": 26
           }
         }
       },
