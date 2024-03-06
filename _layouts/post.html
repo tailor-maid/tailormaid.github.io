@@ -1,18 +1,16 @@
 ---
 layout: default
 ---
-<section class="hero">
-    <div class="hero-body">
-        <p class="title">
-            {{ page.title }}
-        </p>
-        <p class="subtitle">
-            {{ page.date | date: "%-d %B %Y" }}
-        </p>
-    </div>
-</section>
 <div class="container">
-    <div class="content">
-        {{ page.content}}
-    </div>
+    <section class="section">
+        <h1 class="title">{{ page.title }}</h1>
+        <h2 class="subtitle">
+            {{ page.date | date: "%-d %B %Y" }}
+        </h2>
+    </section>
+    <section class="section">
+        <div class="content">
+            {{ page.content}}
+        </div>
+    </section>
 </div>
