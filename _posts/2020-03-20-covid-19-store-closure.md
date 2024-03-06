@@ -1,6 +1,6 @@
 ---
 title: COVID-19 - Immediate Store Closure
-layout: default
+layout: post
 ---
 
 ## Tailor Maid will be temporally closed until further notice on 22 March 2020
