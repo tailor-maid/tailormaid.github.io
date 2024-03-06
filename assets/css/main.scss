@@ -19,6 +19,7 @@ $navbar-item-hover-background-color: none;
 $navbar-item-color: lighten($tailor-maid-grey, 70);
 $navbar-item-hover-color: lighten($tailor-maid-grey, 100);
 
+@import 'bulma/sass/helpers/all';
 @import 'bulma/sass/utilities/all';
 @import 'bulma/sass/base/all';
 @import 'bulma/sass/elements/all';
