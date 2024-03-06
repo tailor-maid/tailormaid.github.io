@@ -9,8 +9,8 @@ More information on the forced closure can be found here on [GOV.UK](https://www
 
 ### What happened to my order?
 All orders were put on hold.
-Work was stored safely and during closure the business premises had regular visits and check-ups to ensure all was fine.
-The business premises was secured throughout closure.
+Work was stored safely and during closure the business premises will have regular visits and check-ups to ensure all is fine.
+The business premises will be secured throughout closure.
 
 ### When will we re-open?
 The latest indications are that high-street shops can re-open on June 15, 2020.
