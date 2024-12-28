@@ -74,9 +74,9 @@
           "hour": 9,
           "minute": 0,
           "date": {
-            "year": 2024,
-            "month": 12,
-            "day": 27
+            "year": 2025,
+            "month": 1,
+            "day": 3
           }
         },
         "close": {
@@ -84,9 +84,9 @@
           "hour": 16,
           "minute": 0,
           "date": {
-            "year": 2024,
-            "month": 12,
-            "day": 27
+            "year": 2025,
+            "month": 1,
+            "day": 3
           }
         }
       },
@@ -131,6 +131,6 @@
         }
       }
     ],
-    "nextOpenTime": "2024-12-27T09:00:00Z"
+    "nextOpenTime": "2024-12-28T09:00:00Z"
   }
 }
