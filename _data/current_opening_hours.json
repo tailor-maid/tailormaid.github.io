@@ -48,6 +48,28 @@
       },
       {
         "open": {
+          "day": 3,
+          "hour": 9,
+          "minute": 0,
+          "date": {
+            "year": 2025,
+            "month": 1,
+            "day": 8
+          }
+        },
+        "close": {
+          "day": 3,
+          "hour": 13,
+          "minute": 0,
+          "date": {
+            "year": 2025,
+            "month": 1,
+            "day": 8
+          }
+        }
+      },
+      {
+        "open": {
           "day": 4,
           "hour": 9,
           "minute": 0,
@@ -116,20 +138,11 @@
     "weekdayDescriptions": [
       "Monday: 9:00 AM – 4:00 PM",
       "Tuesday: 9:00 AM – 4:00 PM",
-      "Wednesday: Closed",
+      "Wednesday: 9:00 AM – 1:00 PM",
       "Thursday: 9:00 AM – 4:00 PM",
       "Friday: 9:00 AM – 4:00 PM",
       "Saturday: 9:00 AM – 3:00 PM",
       "Sunday: Closed"
-    ],
-    "specialDays": [
-      {
-        "date": {
-          "year": 2025,
-          "month": 1,
-          "day": 1
-        }
-      }
     ],
     "nextOpenTime": "2025-01-02T09:00:00Z"
   }
