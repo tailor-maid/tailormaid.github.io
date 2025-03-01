@@ -97,8 +97,8 @@
           "minute": 0,
           "date": {
             "year": 2025,
-            "month": 2,
-            "day": 28
+            "month": 3,
+            "day": 7
           }
         },
         "close": {
@@ -107,8 +107,8 @@
           "minute": 0,
           "date": {
             "year": 2025,
-            "month": 2,
-            "day": 28
+            "month": 3,
+            "day": 7
           }
         }
       },
@@ -144,6 +144,6 @@
       "Saturday: 9:00 AM – 3:00 PM",
       "Sunday: Closed"
     ],
-    "nextOpenTime": "2025-02-28T09:00:00Z"
+    "nextOpenTime": "2025-03-01T09:00:00Z"
   }
 }
