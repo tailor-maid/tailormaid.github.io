@@ -120,7 +120,7 @@
           "date": {
             "year": 2025,
             "month": 4,
-            "day": 5
+            "day": 12
           }
         },
         "close": {
@@ -130,7 +130,7 @@
           "date": {
             "year": 2025,
             "month": 4,
-            "day": 5
+            "day": 12
           }
         }
       }
@@ -144,6 +144,6 @@
       "Saturday: 9:00 AM – 3:00 PM",
       "Sunday: Closed"
     ],
-    "nextOpenTime": "2025-04-05T08:00:00Z"
+    "nextOpenTime": "2025-04-07T08:00:00Z"
   }
 }
