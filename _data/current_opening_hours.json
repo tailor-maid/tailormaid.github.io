@@ -76,7 +76,7 @@
           "date": {
             "year": 2026,
             "month": 5,
-            "day": 1
+            "day": 8
           }
         },
         "close": {
@@ -86,7 +86,7 @@
           "date": {
             "year": 2026,
             "month": 5,
-            "day": 1
+            "day": 8
           }
         }
       },
@@ -131,6 +131,6 @@
         }
       }
     ],
-    "nextOpenTime": "2026-05-01T08:00:00Z"
+    "nextOpenTime": "2026-05-02T08:00:00Z"
   }
 }
