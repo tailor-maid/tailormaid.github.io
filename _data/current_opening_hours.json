@@ -32,7 +32,7 @@
           "date": {
             "year": 2026,
             "month": 6,
-            "day": 2
+            "day": 9
           }
         },
         "close": {
@@ -42,7 +42,7 @@
           "date": {
             "year": 2026,
             "month": 6,
-            "day": 2
+            "day": 9
           }
         }
       },
@@ -144,6 +144,6 @@
       "Saturday: 9:00 AM – 3:00 PM",
       "Sunday: Closed"
     ],
-    "nextOpenTime": "2026-06-02T08:00:00Z"
+    "nextOpenTime": "2026-06-03T08:00:00Z"
   }
 }
