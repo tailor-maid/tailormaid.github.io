@@ -1,6 +1,6 @@
 {
   "currentOpeningHours": {
-    "openNow": false,
+    "openNow": true,
     "periods": [
       {
         "open": {
@@ -53,8 +53,8 @@
           "minute": 0,
           "date": {
             "year": 2026,
-            "month": 8,
-            "day": 26
+            "month": 9,
+            "day": 2
           }
         },
         "close": {
@@ -63,8 +63,8 @@
           "minute": 0,
           "date": {
             "year": 2026,
-            "month": 8,
-            "day": 26
+            "month": 9,
+            "day": 2
           }
         }
       },
@@ -144,6 +144,6 @@
       "Saturday: 9:00 AM – 3:00 PM",
       "Sunday: Closed"
     ],
-    "nextOpenTime": "2026-08-26T08:00:00Z"
+    "nextCloseTime": "2026-08-27T15:00:00Z"
   }
 }
