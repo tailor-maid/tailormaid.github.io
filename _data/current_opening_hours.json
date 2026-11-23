@@ -1,6 +1,6 @@
 {
   "currentOpeningHours": {
-    "openNow": false,
+    "openNow": true,
     "periods": [
       {
         "open": {
@@ -144,6 +144,6 @@
       "Saturday: 9:00 AM – 3:00 PM",
       "Sunday: Closed"
     ],
-    "nextOpenTime": "2026-11-23T09:00:00Z"
+    "nextCloseTime": "2026-11-23T16:00:00Z"
   }
 }
